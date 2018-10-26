@@ -1,0 +1,23 @@
+.logo{
+    line-height: 64px;
+    padding-left: 20px;
+    background-color: #002140;
+    margin-top:10px;
+    img {
+        height: 35px;
+    }
+    h1 {
+        color: #ffffff;
+        font-szie: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 10px;
+    }
+    span {
+        color: #ffffff;
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 10px;
+    }
+}

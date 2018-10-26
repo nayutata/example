@@ -1,0 +1,68 @@
+@import './default.less';
+@import './loading.less';
+ul,li{
+    list-style: none;
+}
+.clearfix{
+    &::after{
+        content:' ';
+        clear:both;
+        display: block;
+        visibility: hidden;
+    }
+}
+.container{
+    display: flex;
+    .nav-left{
+        width: 15%;
+        min-width: 80px;
+        height: calc(100vh);
+        background-color: @colorR;
+    }
+    .main{
+        background-color: @colorL;
+        flex: 1;
+        height: calc(100vh);
+        overflow: auto;
+
+    }
+    .content{
+        position: relative;
+        padding: 20px;
+    }
+}
+
+.card-shadow {
+    -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.simple-form {
+    .ant-form-item {
+        display: flex;
+      }
+}
+
+.logo{
+    line-height: 64px;
+    padding-left: 20px;
+    background-color: #002140;
+    margin-top:10px;
+    img {
+        height: 35px;
+    }
+    h1 {
+        color: #ffffff;
+        font-szie: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 10px;
+    }
+    span {
+        color: #ffffff;
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 10px;
+    }
+}

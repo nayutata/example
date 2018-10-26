@@ -1,0 +1,1 @@
+{"code":200,"message":"成功","reqId":null,"detail":null,"data":{"totalCount":2,"pageNo":1,"pageSize":10,"list":[{"id":1,"name":"恒大1","address":"恒大1期","manager":"温细艳","mobile":"13510218421","createTime":1536465041000},{"id":2,"name":"山水华府","address":"山水华府2期","manager":"钟艳","mobile":"13898738378","createTime":1536482299000}]}}

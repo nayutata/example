@@ -1,0 +1,83 @@
+import React from 'react'
+import { Row, Col } from 'antd';
+import './index.less'
+import Util from '../../utils/utils'
+import axios from '../../axios'
+import {connect} from 'react-redux'
+
+class Header extends React.Component{
+    state={}
+    componentWillMount(){
+
+        const { menuName, menuType } = this.props;
+ 
+
+        this.setState({
+            userName:'dragon'
+        })
+
+        // setInterval(()=>{
+        //     let sysTime = Util.formateDate(new Date().getTime());
+        //     this.setState({
+        //         sysTime
+        //     })
+        // },1000)
+
+        // this.getWeatherAPIData();
+    }
+
+    // getWeatherAPIData(){
+    //     let city = "深圳"
+    //     axios.jsonp({
+    //         url:'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=3p49MVra6urFRGOT9s8UBWr2',
+
+    //     }).then((res)=>{
+    //         if(res.status == 'success'){
+    //             // debugger;
+    //             let data = res.results[0].weather_data[0];
+    //             this.setState({
+    //                 dayPictureUrl:data.dayPictureUrl,
+    //                 weather: data.weather
+    //             });
+    //         }
+    //     })
+    // }
+
+    render(){
+        const { menuName, menuType } = this.props;
+        return (
+            <div className="header">
+                <Row className="header-top">
+                    <Col span="24">
+                        {/* <span>welcome,{this.state.userName}</span> */}
+                        <a href="#">退出</a>
+                    </Col>    
+                </Row> 
+                <Row className="breadcrumb">
+                    <Col span="4" className="breadcrumb-title">
+                        {menuName}
+                    </Col>
+                    <Col span="20" className="weather">
+                        <span className="date">{this.state.sysTime}</span>
+                        <span className="weather-img">
+                            <img src={this.state.dayPictureUrl} alt=""></img> 
+                        </span>
+                        <span className="weather-detail"> 
+                            {this.state.weather}
+                        </span>
+                    </Col>
+                </Row>
+
+            </div>
+
+        );
+    }
+}
+
+const mapStateToProps = state =>{
+    return {
+        menuName:state.menuName
+    }
+}
+
+export default connect(mapStateToProps)(Header);
